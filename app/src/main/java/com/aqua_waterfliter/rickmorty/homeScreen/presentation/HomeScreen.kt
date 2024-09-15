@@ -41,7 +41,7 @@ fun HomeScreen() {
     val viewModel = hiltViewModel<HomeViewModel>()
     ComposableLifecycle { _, event ->
         if (event == Lifecycle.Event.ON_CREATE) {
-           // viewModel.onEvent(HomeEvent.LoadCharacters)
+            // viewModel.onEvent(HomeEvent.LoadCharacters)
         }
     }
 
@@ -103,22 +103,35 @@ fun HomeScreen() {
                     loadState.refresh is LoadState.Loading -> {
                         // Initial loading state
                         item {
-                            CircularProgressIndicator(
+                            Box(
                                 modifier = Modifier
-                                    .size(70.dp)
-                                    .padding(16.dp)
-                            )
+                                    .fillMaxWidth(),
+                                contentAlignment = Alignment.BottomCenter
+                            ) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier
+                                        .align(Alignment.BottomCenter)
+                                        .size(70.dp)
+                                        .padding(16.dp)
+                                )
+                            }
                         }
                     }
 
                     loadState.append is LoadState.Loading -> {
-                        // Pagination loading state
                         item {
-                            CircularProgressIndicator(
+                            Box(
                                 modifier = Modifier
-                                    .size(70.dp)
-                                    .padding(16.dp)
-                            )
+                                    .fillMaxWidth(),
+                                contentAlignment = Alignment.BottomCenter
+                            ) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier
+                                        .align(Alignment.BottomCenter)
+                                        .size(70.dp)
+                                        .padding(16.dp)
+                                )
+                            }
                         }
                     }
 
@@ -141,7 +154,7 @@ fun HomeScreen() {
 
         if (pullRefreshState.isRefreshing) {
             LaunchedEffect(true) {
-               // viewModel.onEvent(HomeEvent.LoadCharacters)
+                // viewModel.onEvent(HomeEvent.LoadCharacters)
 
             }
         }

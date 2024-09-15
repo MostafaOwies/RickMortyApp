@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.com.google.dagger.hilt.android)
-    id("org.jetbrains.kotlin.kapt") // Apply the kapt plugin in Kotlin DSL
+    id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics) // Apply the kapt plugin in Kotlin DSL
 
 }
 
@@ -71,6 +73,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.firebase.crashlytics.ktx)
     implementation(libs.androidx.material3)
+    implementation(libs.google.firebase.auth)
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -118,6 +123,7 @@ dependencies {
     //paging
     implementation(libs.paging)
     implementation(libs.paging.compose)
+
 }
 kapt {
     correctErrorTypes = true

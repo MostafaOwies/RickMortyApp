@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048012509182",
+    "project_id": "rickmorty-f53c7",
+    "storage_bucket": "rickmorty-f53c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048012509182:android:8aae9a319a3e9e29c2faaf",
+        "android_client_info": {
+          "package_name": "com.aqua_waterfliter.rickmorty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkQhrcVKoTNzo_NXOlwloTPVoBvLTYHV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
